@@ -9,7 +9,6 @@ public class PersonagenWalk : MonoBehaviour
     private Animator _animator;
     private float _andar = 0;
 
-
     void Start()
     {
 
@@ -23,8 +22,6 @@ public class PersonagenWalk : MonoBehaviour
 
         _andar = Input.GetAxis("Vertical");
 
-
-
         if (Input.GetKey(KeyCode.LeftShift))
         {
             _andar += 1;
@@ -35,7 +32,7 @@ public class PersonagenWalk : MonoBehaviour
             _andar = 1;
         }
 
-
+     
         _animator.SetFloat("Andar", _andar);
         this.transform.Rotate(0, (Input.GetAxis("Horizontal") * rotacionar) * Time.deltaTime, 0);
 
