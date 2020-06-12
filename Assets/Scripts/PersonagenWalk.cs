@@ -38,6 +38,6 @@ public class PersonagenWalk : MonoBehaviour
 
         _animator.SetFloat("Andar", _andar);
         this.transform.Rotate(0, (Input.GetAxis("Horizontal") * rotacionar) * Time.deltaTime, 0);
-
+        Debug.Log(_andar);
     }
 }
