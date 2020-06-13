@@ -11,6 +11,8 @@ public class PersonagenWalk : MonoBehaviour
     private float _andar = 0;
     private int _danca = 0;
     private int _flexao = 0;
+    private int _sentar = 0;
+    private int _abdominal = 0;
 
     void Start()
     {
@@ -29,21 +31,34 @@ public class PersonagenWalk : MonoBehaviour
         _andar = Input.GetAxis("Vertical");
 
 
-        if (Input.GetKey(KeyCode.F))
+        
+        if (Input.GetKey(KeyCode.B)) //Sentar
+        {
+            _abdominal += 1;
+
+        }
+        if (Input.GetKey(KeyCode.N)) //Levantar
+        {
+            _abdominal += -1;
+        }
+
+        
+
+        if (Input.GetKey(KeyCode.F)) // fazer flexão
         {
             _flexao += 1;
 
-        }if (Input.GetKey(KeyCode.G))
+        }if (Input.GetKey(KeyCode.G)) // Parar Flexão
         {
             _flexao += -1;
         }
 
-        if (Input.GetKey(KeyCode.K))
+        if (Input.GetKey(KeyCode.K)) // Dançar
         {
             _danca += 1;
         }
 
-        if (Input.GetKey(KeyCode.L))
+        if (Input.GetKey(KeyCode.L)) // Parar de dançar
         {
             _danca += -1;
         }
@@ -59,11 +74,26 @@ public class PersonagenWalk : MonoBehaviour
             _andar = 1;
         }
 
+        // Controle de animações
+        _animator.SetInteger("Abdominal", _abdominal);
+        _animator.SetInteger("Sentar", _sentar);
         _animator.SetInteger("Flexao", _flexao);
-
         _animator.SetInteger("Danca", _danca);
         _animator.SetFloat("Andar", _andar);
+
+        // Movimentar a camera
+
+        if (_danca == 0 || _flexao == 0 || _sentar == 0 || _abdominal == 0) { 
+        
         this.transform.Rotate(0, (Input.GetAxis("Horizontal") * rotacionar) * Time.deltaTime, 0);
+
+        }
+
+
+
+
+
+        
        
     }
 }
