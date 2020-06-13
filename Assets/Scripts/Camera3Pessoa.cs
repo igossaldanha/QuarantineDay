@@ -33,6 +33,10 @@ public class Camera3Pessoa : MonoBehaviour
 
     void Update()
     {
+
+        if (ConfigPause.pause) return ;
+
+
         if (Input.GetKeyDown("v") && indise < (posicoes.Length - 1)) {
 
             indise++;

@@ -21,6 +21,9 @@ public class PersonagenWalk : MonoBehaviour
     void Update()
     {
 
+        if (ConfigPause.pause) return;
+
+
         _andar = Input.GetAxis("Vertical");
 
 

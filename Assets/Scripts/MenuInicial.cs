@@ -24,4 +24,15 @@ public class MenuInicial : MonoBehaviour
         Application.Quit();
     
     }
+
+    public void VoltarMenu()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MenuInicial");
+    }
+
+
+    public void Contorles()
+    {
+
+    }
 }
