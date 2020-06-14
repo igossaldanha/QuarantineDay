@@ -11,9 +11,11 @@ public class CutSceneAtivador : MonoBehaviour
     public bool playerOnTrigger;
     private bool playerIsTrigger;
     private bool alreadyPLayed;
+
     public UnityEvent onPlay;
     public UnityEvent onStop;
 
+    public GameObject canvas;
 
     // Start is called before the first frame update
     
@@ -25,9 +27,15 @@ public class CutSceneAtivador : MonoBehaviour
 
             if (Input.GetKey(KeyCode.E)){
                 StartCutScene();
+
+                if (canvas != null)
+                {
+                    canvas.SetActive(false);
+                }
+
             }
-            
-            
+
+
         }
 
     }
@@ -56,6 +64,10 @@ public class CutSceneAtivador : MonoBehaviour
 
             playerIsTrigger = true;
 
+            if (canvas != null) {
+                canvas.SetActive(true); 
+            }
+
             if (playerOnTrigger) {
                 StartCutScene();
             }
@@ -67,6 +79,11 @@ public class CutSceneAtivador : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+
+            if (canvas != null)
+            {
+                canvas.SetActive(false);
+            }
 
             playerIsTrigger = false;
 

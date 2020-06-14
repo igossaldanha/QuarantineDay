@@ -9,7 +9,7 @@ public class PersonagenWalk : MonoBehaviour
 
     public AudioSource somPassos;
 
-    public PlayableDirector introCutScene;
+    //public PlayableDirector introCutScene;
 
     public float rotacionar = 200;
     private Animator _animator;
@@ -19,11 +19,11 @@ public class PersonagenWalk : MonoBehaviour
     private int _sentar = 0;
     private int _abdominal = 0;
 
-    private bool canControl;
+    // private bool canControl;
 
     void Start()
     {
-        Invoke("habilitarControlles", (float)introCutScene.duration);
+        //  Invoke("habilitarControlles", (float)introCutScene.duration);
         _animator = GetComponent<Animator>();
 
     }
@@ -32,18 +32,13 @@ public class PersonagenWalk : MonoBehaviour
     void Update()
     {
 
-        if (!canControl)
-        {
-            return;
-        }
-
         if (ConfigPause.pause) return;
 
 
         _andar = Input.GetAxis("Vertical");
 
 
-        
+
         if (Input.GetKey(KeyCode.B)) //Sentar
         {
             _abdominal += 1;
@@ -54,13 +49,14 @@ public class PersonagenWalk : MonoBehaviour
             _abdominal += -1;
         }
 
-        
+
 
         if (Input.GetKey(KeyCode.F)) // fazer flexão
         {
             _flexao += 1;
 
-        }if (Input.GetKey(KeyCode.G)) // Parar Flexão
+        }
+        if (Input.GetKey(KeyCode.G)) // Parar Flexão
         {
             _flexao += -1;
         }
@@ -96,30 +92,21 @@ public class PersonagenWalk : MonoBehaviour
 
         // Movimentar a camera
 
-        if (_danca == 0 || _flexao == 0 || _sentar == 0 || _abdominal == 0) { 
-        
-        this.transform.Rotate(0, (Input.GetAxis("Horizontal") * rotacionar) * Time.deltaTime, 0);
+        if (_danca == 0 || _flexao == 0 || _sentar == 0 || _abdominal == 0)
+        {
+
+            this.transform.Rotate(0, (Input.GetAxis("Horizontal") * rotacionar) * Time.deltaTime, 0);
 
         }
-       
+
     }
 
-    public void SondPassos() {
-
-        somPassos.Play();
-    
-    }
-
-    public void desabilitarControlles() {
-
-        canControl = false;
-    
-    }
-    public void habilitarControlles()
+    public void SondPassos()
     {
 
-        canControl = true;
+        somPassos.Play();
 
     }
+
 
 }
