@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.Data;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class PersonagenWalk : MonoBehaviour
 {
 
     public AudioSource somPassos;
+
+    public PlayableDirector introCutScene;
 
     public float rotacionar = 200;
     private Animator _animator;
@@ -16,9 +19,11 @@ public class PersonagenWalk : MonoBehaviour
     private int _sentar = 0;
     private int _abdominal = 0;
 
+    private bool canControl;
+
     void Start()
     {
-
+        Invoke("habilitarControlles", (float)introCutScene.duration);
         _animator = GetComponent<Animator>();
 
     }
@@ -26,6 +31,11 @@ public class PersonagenWalk : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (!canControl)
+        {
+            return;
+        }
 
         if (ConfigPause.pause) return;
 
@@ -91,12 +101,6 @@ public class PersonagenWalk : MonoBehaviour
         this.transform.Rotate(0, (Input.GetAxis("Horizontal") * rotacionar) * Time.deltaTime, 0);
 
         }
-
-
-
-
-
-        
        
     }
 
@@ -105,4 +109,17 @@ public class PersonagenWalk : MonoBehaviour
         somPassos.Play();
     
     }
+
+    public void desabilitarControlles() {
+
+        canControl = false;
+    
+    }
+    public void habilitarControlles()
+    {
+
+        canControl = true;
+
+    }
+
 }
