@@ -6,6 +6,8 @@ using UnityEngine;
 public class PersonagenWalk : MonoBehaviour
 {
 
+    public AudioSource somPassos;
+
     public float rotacionar = 200;
     private Animator _animator;
     private float _andar = 0;
@@ -74,6 +76,7 @@ public class PersonagenWalk : MonoBehaviour
             _andar = 1;
         }
 
+
         // Controle de animações
         _animator.SetInteger("Abdominal", _abdominal);
         _animator.SetInteger("Sentar", _sentar);
@@ -95,5 +98,11 @@ public class PersonagenWalk : MonoBehaviour
 
         
        
+    }
+
+    public void SondPassos() {
+
+        somPassos.Play();
+    
     }
 }

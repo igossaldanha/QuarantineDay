@@ -19,6 +19,11 @@ public class MenuInicial : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene");
     }
 
+    public void TelaSobre()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Sobre");
+    }
+
     public void SairJogo() {
 
         Application.Quit();
