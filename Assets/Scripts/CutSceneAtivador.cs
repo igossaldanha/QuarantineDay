@@ -12,8 +12,8 @@ public class CutSceneAtivador : MonoBehaviour
     private bool playerIsTrigger;
     private bool alreadyPLayed;
 
-    public UnityEvent onPlay;
-    public UnityEvent onStop;
+    //public UnityEvent onPlay;
+    //public UnityEvent onStop;
 
     public GameObject canvas;
 
@@ -40,23 +40,25 @@ public class CutSceneAtivador : MonoBehaviour
 
     }
 
+    
     void StartCutScene() {
 
-        if (alreadyPLayed)
-            return;
+       // if (alreadyPLayed)
+       //     return;
 
         alreadyPLayed = true;
-        onPlay.Invoke();
+       // onPlay.Invoke();
         cutScene.Play();
-        Invoke("FinishCutScene", (float)cutScene.duration);
+       // Invoke("FinishCutScene", (float)cutScene.duration);
 
     }
 
     void FinishCutScene() {
 
-        onStop.Invoke();
+      //  onStop.Invoke();
     
     }
+    
 
     private void OnTriggerEnter(Collider other)
     {
@@ -68,9 +70,9 @@ public class CutSceneAtivador : MonoBehaviour
                 canvas.SetActive(true); 
             }
 
-            if (playerOnTrigger) {
-                StartCutScene();
-            }
+          //  if (playerOnTrigger) {
+            //    StartCutScene();
+           // }
         
         }
     }
@@ -87,10 +89,10 @@ public class CutSceneAtivador : MonoBehaviour
 
             playerIsTrigger = false;
 
-            if (playerOnTrigger)
-            {
+           // if (playerOnTrigger)
+         //   {
 
-            }
+          //  }
 
         }
     }
