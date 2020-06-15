@@ -9,8 +9,6 @@ public class PersonagenWalk : MonoBehaviour
 
     public AudioSource somPassos;
 
-    //public PlayableDirector introCutScene;
-
     public float rotacionar = 200;
     private Animator _animator;
     private float _andar = 0;
@@ -19,43 +17,33 @@ public class PersonagenWalk : MonoBehaviour
     private int _sentar = 0;
     private int _abdominal = 0;
 
-    // private bool canControl;
 
     void Start()
-    {
-        //  Invoke("habilitarControlles", (float)introCutScene.duration);
+    { 
         _animator = GetComponent<Animator>();
-
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
 
         if (ConfigPause.pause) return;
 
-
         _andar = Input.GetAxis("Vertical");
 
-
-
-        if (Input.GetKey(KeyCode.B)) //Sentar
+        if (Input.GetKey(KeyCode.B)) //Abdominal
         {
             _abdominal += 1;
-
         }
-        if (Input.GetKey(KeyCode.N)) //Levantar
+        if (Input.GetKey(KeyCode.N)) //parar abdnominal
         {
             _abdominal += -1;
         }
 
-
-
         if (Input.GetKey(KeyCode.F)) // fazer flexão
         {
             _flexao += 1;
-
         }
+
         if (Input.GetKey(KeyCode.G)) // Parar Flexão
         {
             _flexao += -1;
@@ -70,7 +58,6 @@ public class PersonagenWalk : MonoBehaviour
         {
             _danca += -1;
         }
-
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
@@ -91,21 +78,16 @@ public class PersonagenWalk : MonoBehaviour
         _animator.SetFloat("Andar", _andar);
 
         // Movimentar a camera
-
         if (_danca == 0 || _flexao == 0 || _sentar == 0 || _abdominal == 0)
         {
-
             this.transform.Rotate(0, (Input.GetAxis("Horizontal") * rotacionar) * Time.deltaTime, 0);
-
         }
 
     }
 
     public void SondPassos()
     {
-
         somPassos.Play();
-
     }
 
 
