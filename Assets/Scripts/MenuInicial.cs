@@ -35,9 +35,4 @@ public class MenuInicial : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene("MenuInicial");
     }
 
-
-    public void Contorles()
-    {
-
-    }
 }

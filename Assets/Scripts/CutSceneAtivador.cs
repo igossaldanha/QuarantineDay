@@ -12,14 +12,8 @@ public class CutSceneAtivador : MonoBehaviour
     private bool playerIsTrigger;
     private bool alreadyPLayed;
 
-    //public UnityEvent onPlay;
-    //public UnityEvent onStop;
-
     public GameObject canvas;
 
-    // Start is called before the first frame update
-    
-    // Update is called once per frame
     void Update()
     {
 
@@ -32,34 +26,18 @@ public class CutSceneAtivador : MonoBehaviour
                 {
                     canvas.SetActive(false);
                 }
-
             }
-
-
         }
-
     }
-
-    
+ 
     void StartCutScene() {
 
-       // if (alreadyPLayed)
-       //     return;
-
         alreadyPLayed = true;
-       // onPlay.Invoke();
         cutScene.Play();
-       // Invoke("FinishCutScene", (float)cutScene.duration);
-
+  
     }
 
-    void FinishCutScene() {
-
-      //  onStop.Invoke();
-    
-    }
-    
-
+   
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player")) {
@@ -69,11 +47,6 @@ public class CutSceneAtivador : MonoBehaviour
             if (canvas != null) {
                 canvas.SetActive(true); 
             }
-
-          //  if (playerOnTrigger) {
-            //    StartCutScene();
-           // }
-        
         }
     }
 
@@ -88,12 +61,7 @@ public class CutSceneAtivador : MonoBehaviour
             }
 
             playerIsTrigger = false;
-
-           // if (playerOnTrigger)
-         //   {
-
-          //  }
-
+        
         }
     }
 }
