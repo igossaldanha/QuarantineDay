@@ -1,8 +1,10 @@
-﻿using System.Collections;
+﻿using JetBrains.Annotations;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.Video;
 
 public class PersonagenWalk : MonoBehaviour
 {
@@ -16,6 +18,9 @@ public class PersonagenWalk : MonoBehaviour
     private int _flexao = 0;
     private int _sentar = 0;
     private int _abdominal = 0;
+    public GameObject ControladorDeVida;
+    public float TimeInicial = 0;
+    public float vida = 0;
 
 
     void Start()
@@ -25,36 +30,44 @@ public class PersonagenWalk : MonoBehaviour
     
     void Update()
     {
+        
 
         if (ConfigPause.pause) return;
 
         _andar = Input.GetAxis("Vertical");
 
-        if (Input.GetKey(KeyCode.B)) //Abdominal
+        
+
+        if (Input.GetKeyDown(KeyCode.U)) // Fazer Abdominal
         {
+   
             _abdominal += 1;
+            
         }
-        if (Input.GetKey(KeyCode.N)) //parar abdnominal
+
+        if (Input.GetKeyUp(KeyCode.U)) // Parar Abdominal
         {
+            vida = 0;
             _abdominal += -1;
         }
 
-        if (Input.GetKey(KeyCode.F)) // fazer flexão
+        if (Input.GetKeyDown(KeyCode.I)) // fazer flexão
         {
             _flexao += 1;
-        }
-
-        if (Input.GetKey(KeyCode.G)) // Parar Flexão
+        } 
+        
+        if (Input.GetKeyUp(KeyCode.I)) // parar flexão
         {
             _flexao += -1;
+
         }
 
-        if (Input.GetKey(KeyCode.K)) // Dançar
+        if (Input.GetKeyDown(KeyCode.O)) // dança
         {
             _danca += 1;
         }
 
-        if (Input.GetKey(KeyCode.L)) // Parar de dançar
+        if (Input.GetKeyUp(KeyCode.O)) // parar dança
         {
             _danca += -1;
         }
@@ -84,6 +97,40 @@ public class PersonagenWalk : MonoBehaviour
         }
 
     }
+
+    /* 
+    void Abdominal()
+    {
+            _abdominal += 1;
+        
+
+    }
+    void Flexao()
+    {
+        if (_flexao == 1)
+        {
+            _flexao += -1;
+        }
+        else if (_flexao == 0)
+        {
+            _flexao += 1;
+        }
+    }
+    void Danca()
+    {
+        if (_danca == 1)
+        {
+            _danca += -1;
+        }
+        else if (_danca == 0)
+        {
+            _danca += 1;
+        }
+    }
+
+
+    */
+
 
     public void SondPassos()
     {
