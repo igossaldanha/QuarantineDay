@@ -110,7 +110,7 @@ public class SceneController : MonoBehaviour {
     {
 
         if (_score == 4) {
-            BarraVida.vidaAtual += 60f;
+            BarraVida.vidaAtual += 50f;
             _score = 0;
            // TrggersParaMineGames.GameFinish = true;
                 

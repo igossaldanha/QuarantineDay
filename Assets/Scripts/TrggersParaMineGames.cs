@@ -50,6 +50,7 @@ public class TrggersParaMineGames : MonoBehaviour
         
     }
     */
+
     // Ativar a Instancia do minegame em tela
     void Jogando(bool statusJogo)
     {

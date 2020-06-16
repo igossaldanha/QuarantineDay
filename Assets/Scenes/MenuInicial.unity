@@ -715,7 +715,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "P - Pause\nE - Intera\xE7\xE3o com os objetos\n"
+  m_Text: "P - Pause\nE - Intera\xE7\xE3o com os objetos\n\"A paci\xEAncia \xE9 uma
+    virtude\""
 --- !u!222 &684956053
 CanvasRenderer:
   m_ObjectHideFlags: 0

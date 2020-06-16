@@ -26,6 +26,7 @@ public class PersonagenWalk : MonoBehaviour
     void Start()
     { 
         _animator = GetComponent<Animator>();
+       
     }
     
     void Update()
