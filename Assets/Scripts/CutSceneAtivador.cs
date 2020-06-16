@@ -11,6 +11,8 @@ public class CutSceneAtivador : MonoBehaviour
     public bool playerOnTrigger;
     private bool playerIsTrigger;
 
+    public GameObject Destruir;
+
     public GameObject canvas;
 
     void Update()
@@ -20,7 +22,8 @@ public class CutSceneAtivador : MonoBehaviour
 
             if (Input.GetKey(KeyCode.E)){
                 StartCutScene();
-                BarraVida.vidaAtual += 20f;
+                BarraVida.vidaAtual += 30f;
+                Destruir.SetActive(false);
                 if (canvas != null)
                 {
                     canvas.SetActive(false);

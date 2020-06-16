@@ -20,7 +20,7 @@ public class TrggersParaMineGames : MonoBehaviour
     
     // Verificador de finalização
     static public bool GameFinish;
-
+    private bool receptor;
     // Ativadores dos minegames
     public GameObject MineGame;
     private bool modificador;
@@ -32,22 +32,24 @@ public class TrggersParaMineGames : MonoBehaviour
         Jogando(false);
     }
 
-
+    /*
     private void FixedUpdate()
     {
         // Verificar se o minegame foi concluido
         if (GameFinish == true) {
 
-            modificador = false;
-            Jogando(modificador);
+            //modificador = false;
+            receptor = false;
+            Jogando(receptor);
             CanvasDeBarras.SetActive(!modificador);
             player.SetActive(!modificador);
             casa.SetActive(!modificador);
             concertosCasa.SetActive(!modificador);
             MainCamera.SetActive(!modificador);
         }
+        
     }
-
+    */
     // Ativar a Instancia do minegame em tela
     void Jogando(bool statusJogo)
     {

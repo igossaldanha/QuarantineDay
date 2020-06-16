@@ -20,7 +20,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Ganhou.unity
     guid: 1c8f4ee27129d93419076635b371f89f
-  - enabled: 1
-    path: Assets/Scenes/Carregamento.unity
-    guid: 2756232ae74cabb44bfdcbf3f49c61e9
   m_configObjects: {}
