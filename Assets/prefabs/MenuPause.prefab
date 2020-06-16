@@ -151,9 +151,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Sua sa\xFAde possui 60s, ao finalizar o mine game voc\xEA ganha 60s, ao
-    ativar um cutscene ganhar\xE1 30seg, e ao bebe caf\xE9 20seg, Cries sua estrategia
-    e se manhtenha vivo ate o fim do dia."
+  m_Text: "Sua sa\xFAde possui 60s, e ao finalizar o minigame, voc\xEA ganha 50s.
+    Ao ativar uma cutscene, ganhar\xE1 30s, e ao beber caf\xE9 20s. Crie sua estrat\xE9gia
+    e se mantenha vivo at\xE9 o fim do dia."
 --- !u!1 &4171125592778555418
 GameObject:
   m_ObjectHideFlags: 0
