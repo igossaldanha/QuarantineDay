@@ -10,7 +10,7 @@ public class CutSceneAtivador : MonoBehaviour
     public PlayableDirector cutScene;
     public bool playerOnTrigger;
     private bool playerIsTrigger;
-   // private bool alreadyPLayed;
+   //private bool alreadyPLayed;
 
     public GameObject canvas;
 
@@ -21,7 +21,7 @@ public class CutSceneAtivador : MonoBehaviour
 
             if (Input.GetKey(KeyCode.E)){
                 StartCutScene();
-
+                BarraVida.vidaAtual += 20f;
                 if (canvas != null)
                 {
                     canvas.SetActive(false);

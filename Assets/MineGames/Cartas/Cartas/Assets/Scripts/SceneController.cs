@@ -1,6 +1,7 @@
 ﻿
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -105,9 +106,22 @@ public class SceneController : MonoBehaviour {
 
     }
 
+    private void Update()
+    {
+
+        if (_score == 4) {
+            BarraVida.vidaAtual += 60f;
+            _score = 0;
+            TrggersParaMineGames.GameFinish = true;
+                
+        }
+
+    }
+    /*
     public void Restart()
     {
         SceneManager.LoadScene("Scene00");
     }
 
+    */
 }

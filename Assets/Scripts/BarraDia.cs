@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class BarraDia : MonoBehaviour
 {
     public Image barraDiaUI;
-    private float HoraMaximo = 1200;
+    private float HoraMaximo = 480;
     static public float HoraAtual;
     //static public float tempo;
 

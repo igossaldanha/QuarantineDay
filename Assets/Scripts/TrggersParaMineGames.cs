@@ -9,17 +9,42 @@ public class TrggersParaMineGames : MonoBehaviour
    // public GameObject objeto;
     public GameObject canvas;
 
+  //  private bool alreadyPLayed;
+
+
+    //Objetos desativdos
+    public GameObject CanvasDeBarras;
+    public GameObject player;
+    public GameObject casa;
+    public GameObject concertosCasa;
+   // public GameObject MusicaDeFundo;
+    
+    static public bool GameFinish;
 
     public GameObject PacMan;
     private bool pacMan;
 
+    
     // Start is called before the first frame update
     void Start()
     {
-
+        GameFinish = false;
         PacMan = Instantiate(PacMan, PacMan.transform.position, PacMan.transform.rotation) as GameObject;
         Jogando(false);
 
+    }
+
+    private void FixedUpdate()
+    {
+        if (GameFinish == true) {
+            //Jogando(false);
+            pacMan = false;
+            Jogando(pacMan);
+            CanvasDeBarras.SetActive(!pacMan);
+            player.SetActive(!pacMan);
+            casa.SetActive(!pacMan);
+            concertosCasa.SetActive(!pacMan);
+        }
     }
 
     void Jogando(bool statusJogo)
@@ -47,7 +72,16 @@ public class TrggersParaMineGames : MonoBehaviour
 
             if (Input.GetKey(KeyCode.E))
             {
+              //  alreadyPLayed = true;
                 Jogando(!pacMan);
+                
+
+
+                //MusicaDeFundo.SetActive(!PacMan);
+                CanvasDeBarras.SetActive(!pacMan);
+                player.SetActive(!pacMan);
+                casa.SetActive(!pacMan);
+                concertosCasa.SetActive(!pacMan);
                 //PacMan.SetActive(pacMan);
                // objeto.SetActive(false);
                 

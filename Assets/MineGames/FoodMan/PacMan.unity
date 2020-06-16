@@ -33254,6 +33254,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PacManGame
       objectReference: {fileID: 0}
+    - target: {fileID: 3913476651129752036, guid: c62f76efdf93dce4abfe4f2cc8df7c91,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7230097054987085054, guid: c62f76efdf93dce4abfe4f2cc8df7c91,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -33311,3 +33316,72 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c62f76efdf93dce4abfe4f2cc8df7c91, type: 3}
+--- !u!1001 &8349455329112071695
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 151379873349591158, guid: 40bb7315696642d48b582c5e8a39dbed,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.94483376
+      objectReference: {fileID: 0}
+    - target: {fileID: 151379873349591158, guid: 40bb7315696642d48b582c5e8a39dbed,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.0688267
+      objectReference: {fileID: 0}
+    - target: {fileID: 151379873349591158, guid: 40bb7315696642d48b582c5e8a39dbed,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.1796393
+      objectReference: {fileID: 0}
+    - target: {fileID: 151379873349591158, guid: 40bb7315696642d48b582c5e8a39dbed,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 151379873349591158, guid: 40bb7315696642d48b582c5e8a39dbed,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 151379873349591158, guid: 40bb7315696642d48b582c5e8a39dbed,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 151379873349591158, guid: 40bb7315696642d48b582c5e8a39dbed,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 151379873349591158, guid: 40bb7315696642d48b582c5e8a39dbed,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 151379873349591158, guid: 40bb7315696642d48b582c5e8a39dbed,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 151379873349591158, guid: 40bb7315696642d48b582c5e8a39dbed,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 151379873349591158, guid: 40bb7315696642d48b582c5e8a39dbed,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4226021830357841169, guid: 40bb7315696642d48b582c5e8a39dbed,
+        type: 3}
+      propertyPath: m_Name
+      value: PrefabPacMan
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 40bb7315696642d48b582c5e8a39dbed, type: 3}
