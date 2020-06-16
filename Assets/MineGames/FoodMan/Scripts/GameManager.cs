@@ -113,11 +113,7 @@ public class GameManager : MonoBehaviour {
                 gameOverScreen.enabled = false;
                 gameWonScreen.enabled = true;
 
-                BarraVida.vidaAtual += 60;
-                TrggersParaMineGames.GameFinish = true;
-
-
-
+                BarraVida.vidaAtual += 80;
 
                 if (!gameWonSound.isPlaying)
                 {

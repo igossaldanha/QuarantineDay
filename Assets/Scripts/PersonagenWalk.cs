@@ -98,40 +98,6 @@ public class PersonagenWalk : MonoBehaviour
 
     }
 
-    /* 
-    void Abdominal()
-    {
-            _abdominal += 1;
-        
-
-    }
-    void Flexao()
-    {
-        if (_flexao == 1)
-        {
-            _flexao += -1;
-        }
-        else if (_flexao == 0)
-        {
-            _flexao += 1;
-        }
-    }
-    void Danca()
-    {
-        if (_danca == 1)
-        {
-            _danca += -1;
-        }
-        else if (_danca == 0)
-        {
-            _danca += 1;
-        }
-    }
-
-
-    */
-
-
     public void SondPassos()
     {
         somPassos.Play();

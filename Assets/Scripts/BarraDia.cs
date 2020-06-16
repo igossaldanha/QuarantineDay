@@ -9,15 +9,12 @@ public class BarraDia : MonoBehaviour
     public Image barraDiaUI;
     private float HoraMaximo = 480;
     static public float HoraAtual;
-    //static public float tempo;
 
-    // Start is called before the first frame update
     void Start()
     {
         HoraAtual = HoraMaximo;
     }
 
-    // Update is called once per frame
     void Update()
     {
 

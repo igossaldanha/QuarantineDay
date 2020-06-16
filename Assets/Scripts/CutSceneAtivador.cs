@@ -10,7 +10,6 @@ public class CutSceneAtivador : MonoBehaviour
     public PlayableDirector cutScene;
     public bool playerOnTrigger;
     private bool playerIsTrigger;
-   //private bool alreadyPLayed;
 
     public GameObject canvas;
 
@@ -32,12 +31,10 @@ public class CutSceneAtivador : MonoBehaviour
  
     void StartCutScene() {
 
-       // alreadyPLayed = true;
         cutScene.Play();
   
     }
-
-   
+ 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player")) {

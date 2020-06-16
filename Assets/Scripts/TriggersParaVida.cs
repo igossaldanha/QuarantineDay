@@ -4,20 +4,13 @@ using UnityEngine;
 
 public class TriggersParaVida : MonoBehaviour
 {
-   // public AudioSource somComida;
 
     public bool playerOnTrigger;
     private bool playerIsTrigger;
+
     public GameObject objeto;
     public GameObject canvas;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
 
@@ -30,7 +23,6 @@ public class TriggersParaVida : MonoBehaviour
                 objeto.SetActive(false);
 
                 BarraVida.vidaAtual += 20f;
-              //  SomComida();
 
                 if (canvas != null)
                 {
@@ -71,12 +63,4 @@ public class TriggersParaVida : MonoBehaviour
            
         }
     }
-
-    /*
-    public void SomComida()
-    {
-        somComida.Play();
-    }
-    */
-
 }

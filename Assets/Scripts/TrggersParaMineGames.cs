@@ -4,87 +4,75 @@ using UnityEngine;
 
 public class TrggersParaMineGames : MonoBehaviour
 {
+    // Dados de presença no Colisor
     public bool playerOnTrigger;
     private bool playerIsTrigger;
-   // public GameObject objeto;
+
+    // Canvas com o detalhe(nome) da ação a ser execultada
     public GameObject canvas;
-
-  //  private bool alreadyPLayed;
-
 
     //Objetos desativdos
     public GameObject CanvasDeBarras;
     public GameObject player;
     public GameObject casa;
     public GameObject concertosCasa;
-   // public GameObject MusicaDeFundo;
+    public GameObject MainCamera;
     
+    // Verificador de finalização
     static public bool GameFinish;
 
-    public GameObject PacMan;
-    private bool pacMan;
+    // Ativadores dos minegames
+    public GameObject MineGame;
+    private bool modificador;
 
-    
-    // Start is called before the first frame update
     void Start()
     {
         GameFinish = false;
-        PacMan = Instantiate(PacMan, PacMan.transform.position, PacMan.transform.rotation) as GameObject;
+        MineGame = Instantiate(MineGame, MineGame.transform.position, MineGame.transform.rotation) as GameObject;
         Jogando(false);
-
     }
+
 
     private void FixedUpdate()
     {
+        // Verificar se o minegame foi concluido
         if (GameFinish == true) {
-            //Jogando(false);
-            pacMan = false;
-            Jogando(pacMan);
-            CanvasDeBarras.SetActive(!pacMan);
-            player.SetActive(!pacMan);
-            casa.SetActive(!pacMan);
-            concertosCasa.SetActive(!pacMan);
+
+            modificador = false;
+            Jogando(modificador);
+            CanvasDeBarras.SetActive(!modificador);
+            player.SetActive(!modificador);
+            casa.SetActive(!modificador);
+            concertosCasa.SetActive(!modificador);
+            MainCamera.SetActive(!modificador);
         }
     }
 
+    // Ativar a Instancia do minegame em tela
     void Jogando(bool statusJogo)
     {
 
-        pacMan = statusJogo;
-        PacMan.SetActive(pacMan);
+        modificador = statusJogo;
+        MineGame.SetActive(modificador);
 
-        if (pacMan == true)
-        {
-            //Time.timeScale = 0;
-        }
-        else
-        {
-            //Time.timeScale = 1;
-        }
     }
 
-    // Update is called once per frame
     void Update()
     {
-
+        // Verificar se esta colidindo
         if (playerIsTrigger)
         {
 
             if (Input.GetKey(KeyCode.E))
             {
-              //  alreadyPLayed = true;
-                Jogando(!pacMan);
-                
 
+                Jogando(!modificador);                
+                CanvasDeBarras.SetActive(!modificador);
+                player.SetActive(!modificador);
+                casa.SetActive(!modificador);
+                concertosCasa.SetActive(!modificador);
+                MainCamera.SetActive(!modificador);
 
-                //MusicaDeFundo.SetActive(!PacMan);
-                CanvasDeBarras.SetActive(!pacMan);
-                player.SetActive(!pacMan);
-                casa.SetActive(!pacMan);
-                concertosCasa.SetActive(!pacMan);
-                //PacMan.SetActive(pacMan);
-               // objeto.SetActive(false);
-                
                 if (canvas != null)
                 {
                     canvas.SetActive(false);
@@ -95,6 +83,7 @@ public class TrggersParaMineGames : MonoBehaviour
 
     }
 
+    // Esta colidindo
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -110,6 +99,7 @@ public class TrggersParaMineGames : MonoBehaviour
         }
     }
 
+    // Não esta colidindo
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
