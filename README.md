@@ -3,7 +3,7 @@
 
 * Quarantine Day, foi inspirado nos dias de isolamento social,  causados pela pandemia de COVID-19. O jogo consiste no desafio de conseguir sobreviver ao tédio de casa, dia após dia.
 
-## Download do Jogo
+## Download do Jogo ( Windows )
 
 * [Quarantine Day](https://github.com/IgoSaldanha/ProjectGameJam/raw/master/Bulids/QuarantineDayBeta1.0.rar)
 
