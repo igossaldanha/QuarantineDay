@@ -5,7 +5,7 @@
 
 ## Download do Jogo
 
-* [Quarantine Day](https://github.com/xHigorZ/Teste/raw/master/v1.0.4.rar)
+* [Quarantine Day](https://github.com/IgoSaldanha/ProjectGameJam/raw/master/Bulids/QuarantineDayBeta1.0.rar)
 
 ## Softwares Usados
 
@@ -30,7 +30,7 @@
 
 ## Iniciativa
 
-*Game Jam proposta pelo professor Daniel dos Santos Saraiva.
+* Game Jam proposta pelo professor Daniel dos Santos Saraiva.
 
 ## Proxima atualização
 
