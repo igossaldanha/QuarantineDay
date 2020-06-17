@@ -26,8 +26,13 @@
 * *Líder* - **Cícero Higor de Medeiros Carnaúba** - [Instagram](https://www.instagram.com/higormcarnauba/)
 * *Desing* - **Aglivan Gomes da Silva Junior** - [Instagram](https://www.instagram.com/ashirodesu/)
 * *Programador* - **Igo Da Silva Saldanha** - [Instagram](https://www.instagram.com/igosaldanha_/)
-* *Músico* - **Gabriel Dias Neves Mandú** - [Instagram](https://www.instagram.com/diasm_gabriel/)
+* *Sonoplasta* - **Gabriel Dias Neves Mandú** - [Instagram](https://www.instagram.com/diasm_gabriel/)
 
-## Agradecimentos
+## Iniciativa
 
-* Ao professor Daniel Saraiva por incentivar está Game Jam.
+*Game Jam proposta pelo professor Daniel dos Santos Saraiva.
+
+## Proxima atualização
+
+- Exercícios Físicos influenciando a gameplay ( Já é possível utilizá-los como teste através das teclas U - I - O )
+- Barra de cansaço tornará o Jogo mais mais difícil
