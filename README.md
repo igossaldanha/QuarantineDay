@@ -1,8 +1,5 @@
 # ![unnamed (1)](https://user-images.githubusercontent.com/56702143/84601421-4833db80-ae56-11ea-8f81-bdb9c7bdcfcc.png) Quarantine Day ![unnamed (1)](https://user-images.githubusercontent.com/56702143/84601421-4833db80-ae56-11ea-8f81-bdb9c7bdcfcc.png)
 
-
-* Quarantine Day, foi inspirado nos dias de isolamento social,  causados pela pandemia de COVID-19. O jogo consiste no desafio de conseguir sobreviver ao tédio de casa, dia após dia.
-
 ## Download do Jogo ( Windows )
 
 * [Quarantine Day](https://github.com/IgoSaldanha/ProjectGameJam/raw/master/Bulids/QuarantineDayBeta1.0.rar)
@@ -23,16 +20,12 @@
 
 ## Criadores
 
-* *Líder* - **Cícero Higor de Medeiros Carnaúba** - [Instagram](https://www.instagram.com/higormcarnauba/)
-* *Desing* - **Aglivan Gomes da Silva Junior** - [Instagram](https://www.instagram.com/ashirodesu/)
-* *Programador* - **Igo Da Silva Saldanha** - [Instagram](https://www.instagram.com/igosaldanha_/)
-* *Sonoplasta* - **Gabriel Dias Neves Mandú** - [Instagram](https://www.instagram.com/diasm_gabriel/)
+* *Líder* - **Cícero Higor de Medeiros Carnaúba**
+* *Desing* - **Aglivan Gomes da Silva Junior**
+* *Programador* - **Igo Da Silva Saldanha**
+* *Sonoplasta* - **Gabriel Dias Neves Mandú**
 
 ## Iniciativa
 
 * Game Jam proposta pelo professor Daniel dos Santos Saraiva.
 
-## Proxima atualização
-
-- Exercícios Físicos influenciando a gameplay ( Já é possível utilizá-los como teste através das teclas U - I - O )
-- Barra de cansaço tornará o Jogo mais mais difícil
